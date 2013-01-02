@@ -6,6 +6,7 @@ class taringa_post
   	private $username;
 	private $password;
 	private $hash;
+	private $data;
 
 	public $id;
 	public $titulo;
