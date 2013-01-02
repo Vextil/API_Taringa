@@ -93,4 +93,36 @@ En caso de querer verificar si se pudieron conseguir los datos o no antes de usa
 taringa_comu
 -------
 
-Arreglando codigo.
+Esta clase sirve para conseguir los datos de una comunidad especifica.
+
+### Uso
+    
+    $comu = new taringa_comu;
+    $comu->process('nombre_corto', 'usuario', 'contraseña');
+
+Siendo 'nombre_corto' el nombre corto de la comunidad, el cual aparece en la URL.
+
+Como en taringa_post, poner un usuario y contraseña no es necesario para que el script funcione, pero si lo es al momento de tratar de conseguir los datos de una comunidad cerrada solo para usuarios registrados.
+
+En caso de no querer poner usuario y contraseña, usalo asi:
+
+    $comu = new taringa_comu;
+    $comu->parse('nombre_corto');
+    
+Al conseguir los datos, de cualquiera de las dos maneras, quedan en estas variables:
+
+    $comu->nombre_corto
+    $comu->nombre
+    $comu->avatar
+    $comu->miembros
+    $comu->temas
+    $comu->seguidores
+    
+Si se quiere verificar si se pudieron conseguir los datos antes de usarlos:
+
+    $comu = new taringa_comu;
+    if ($comu->process('nombre_corto', 'usuario', 'contraseña')) {
+            // Se pudieron conseguir los datos! Hacer algo.
+    } else {
+        // No se pudieron conseguir los datos, que hacemos? 
+    }
