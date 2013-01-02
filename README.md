@@ -43,6 +43,14 @@ De cualquier manera que decidas usarlo, los datos despues se pueden conseguir us
     $post->seguidores
     $post->categoria
     $post->tiempo
+    
+En caso de querer verificar si se pudieron conseguir los datos o no antes de usarlos:
+    $post = new taringa_post;
+    if ($post->process(ID, 'username', 'password') {
+        // Se pudieron conseguir los datos! Hacer algo.
+    } else {
+        // No se pudieron conseguir los datos, que hacemos? 
+    }
 
 taringa_comu
 -------
