@@ -16,13 +16,13 @@ class taringa_comu
 
 	public function process($nombre_corto, $username = false, $password = false)  
 	{
-			$this->nombre_corto = strtolower($nombre_corto);
-			$this->username = $username;
-			$this->password = $password;
-			$this->hash = sha1($this->rand . $this->username . $this->nombre_corto);
-			$this->fetchData();
-			return $this->parseData();
-		}
+		$this->nombre_corto = strtolower($nombre_corto);
+		$this->username = $username;
+		$this->password = $password;
+		$this->hash = sha1($this->rand . $this->username . $this->nombre_corto);
+		$this->fetchData();
+		return $this->parseData();
+	}
 
 	private function fetchData()  
 	{
