@@ -6,6 +6,7 @@ class taringa_comu
 	private $data;
 	private $username;
 	private $password;
+	private $hash;
 
 	public $nombre_corto;
 	public $nombre;
