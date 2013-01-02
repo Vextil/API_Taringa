@@ -3,7 +3,7 @@
 class taringa_post
 {
 
-  private $username;
+  	private $username;
 	private $password;
 	private $hash;
 
