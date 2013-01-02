@@ -21,8 +21,10 @@ Esta clase es utilizada para extraer los datos de un post con una ID especifica,
     $post = new taringa_post;
     $post->process(ID, 'usuario', 'contraseña');
 
-Siendo ID la id del post a buscar, por ejemplo "14561171"
+Siendo ID la id del post a buscar, por ejemplo "14561171".
+
 El usuario y contraseña son opcionales, no son necesarios para que el script funcione correctamente. Pero si son necesarios para poder conseguir los datos de posts cerrados solo para usuarios registrados.
+
 En caso de no proveer estos datos y tratar de conseguir un post cerrado para usuarios registrados entonces $post->process devolvera false.
 
 Si no se quiere poner el usuario y la contraseña entonces se usa de la siguiente manera:
