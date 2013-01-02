@@ -45,6 +45,7 @@ De cualquier manera que decidas usarlo, los datos despues se pueden conseguir us
     $post->tiempo
     
 En caso de querer verificar si se pudieron conseguir los datos o no antes de usarlos:
+
     $post = new taringa_post;
     if ($post->process(ID, 'username', 'password') {
         // Se pudieron conseguir los datos! Hacer algo.
