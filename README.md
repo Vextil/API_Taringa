@@ -122,7 +122,7 @@ Si se quiere verificar si se pudieron conseguir los datos antes de usarlos:
 
     $comu = new taringa_comu;
     if ($comu->process('nombre_corto', 'usuario', 'contraseña')) {
-            // Se pudieron conseguir los datos! Hacer algo.
+        // Se pudieron conseguir los datos! Hacer algo.
     } else {
         // No se pudieron conseguir los datos, que hacemos? 
     }
