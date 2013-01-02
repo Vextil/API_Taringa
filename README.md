@@ -10,7 +10,44 @@ Despues de una larga espera sigue sin existir una forma facil de extraer datos d
 taringa_user
 -------
 
-Arreglando codigo.
+Clase para conseguir los datos de un usuario especifico.
+
+### Uso
+    
+    $user = new taringa_user;
+    $user->process('username');
+    
+Luego de eso todos los datos quedan asignados en las siguientes variables:
+
+    $user->usuario
+    $user->sexo
+    $user->estado
+    $user->karma
+    $user->rango
+    $user->rango_pre_karma
+    $user->puntos
+    $user->posts
+    $user->temas
+    $user->comentarios
+    $user->seguidores
+    $user->siguiendo
+    $user->comunidades
+    $user->medallas
+    $user->pais
+    $user->mensaje
+    $user->avatar
+    $user->pagina_web
+    $user->facebook
+    $user->twitter
+    
+Tambien se puede verificar si se pudieron conseguir los datos o no, de la siguiente manera:
+
+    $user = new taringa_user;
+    if ($user->process('username')) {
+        // Se pudieron conseguir los datos! Hacer algo.
+    } else {
+        // No se pudieron conseguir los datos, que hacemos? 
+    }
 
 taringa_post
 -------
