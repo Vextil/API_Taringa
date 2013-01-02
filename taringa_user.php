@@ -174,7 +174,7 @@ class taringa_user
 	}
 
 	/* Simple funcion para comprimir el HTML 
-	   y hacer el parseo de datos mas simple */
+	   y hacer el parseo de datos mas simple */ 
 	private function compress($html) 
 	{
 	    $search = array('/\>[^\S ]+/s', '/[^\S ]+\</s', '/(\s)+/s');
