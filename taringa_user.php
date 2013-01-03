@@ -100,7 +100,7 @@ class taringa_user
 			}
 			// Estado
 			preg_match('/-792px" title="(.*)"><\/span>/', $this->data, $status);
-			if ($status[1] == "Online"){ 
+			if (isset($status[1]) && $status[1] == "Online"){ 
 				$current = "Online"; 
 			} else { 
 				$current = "Offline"; 
