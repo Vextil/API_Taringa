@@ -24,7 +24,7 @@ class taringa_post
 		$this->username = $username;
 		$this->password = $password;
 		// Hash para usar en el nombre de la cookie
-		$this->hash = sha1($this->rand . $this->username . $this->id);
+		$this->hash = sha1(rand(0,100000) . $this->username . $this->id);
 		$this->fetchData();
 		return $this->parseData();
 	}
