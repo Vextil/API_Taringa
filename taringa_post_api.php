@@ -1,6 +1,6 @@
 <?php
 
-class taringa_post
+class taringa_post_api
 {
 
   	private $username;

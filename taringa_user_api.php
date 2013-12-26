@@ -1,6 +1,6 @@
 <?php
 
-class taringa_user
+class taringa_user_api
 {
 
 	private $data;

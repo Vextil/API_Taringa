@@ -1,6 +1,6 @@
 <?php
 
-class taringa_comu
+class taringa_comu_api
 {
 
 	private $data;
