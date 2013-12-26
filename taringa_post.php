@@ -23,8 +23,8 @@ class taringa_post
 		$this->id = $id;
 		$this->username = $username;
 		$this->password = $password;
-		// Hash para usar en el nombre de la cookie
-		$this->hash = sha1(rand(0,100000) . $this->username . $this->id);
+		// Hash para usar en el nombre de la cookie (Se borra despues de ser usada)
+		$this->hash = sha1(microtime() . rand(0,100000) . $this->username . $this->id);
 		$this->fetchData();
 		return $this->parseData();
 	}
@@ -86,8 +86,8 @@ class taringa_post
 			preg_match('/<span id="fav_counter" data-val="(.*)">(.*)<\/span><\/div>/', $this->data, $favs);
 			preg_match('/<span class=\"data-followers-count\" data-val=\"(.*)\">(.*)<\/span><\/div>/', $this->data, $seguidores);
 			preg_match('/Hace(.*)<\/a><\/div><ul class=\"post-share post-share-list\"/', $this->data, $bread);
-			preg_match('#<div class=\"breadcrumb\"><a href=\"/posts/(.*)\">(.*)</a>(.*)<a title=#', $this->data, $category);
-			$cat = explode('"', $category[1]);
+			preg_match('#<div class=\"breadcrumb\"><a href=\"/posts/(.*)\">(.*)</a>(.*)<a title=#', $this->data, $categoria);
+			$cat = explode('"', $categoria[1]);
 			$seg = explode('"', $seguidores[1]);
 			$fav = explode('"', $favs[1]);
 			// Asignar los datos a sus respectivas variables
@@ -104,7 +104,7 @@ class taringa_post
 		return false;
 	}
 
-	/* Simple funcion para comprimir el HTML 
+	/* Funcion para comprimir el HTML 
 	   y hacer el parseo de datos mas simple */
 	private function compress($html) 
 	{
