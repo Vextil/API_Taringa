@@ -1,3 +1,5 @@
+Debido a los recientes cambios en el diseño de Taringa! es posible que la API ya no funcione correctamente.
+
 API_Taringa
 ===========
 
